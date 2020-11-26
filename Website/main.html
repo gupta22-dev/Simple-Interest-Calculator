@@ -1,0 +1,85 @@
+<html>
+<title>Demo Web with navigation and icons</title>
+<link rel="stylesheet" href="/assets/dcode.css">
+<link rel="shortcut icon" href="/assests/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link href="https://fonts.googleapis.com/icon?family=Material+icons" rel="stylesheet"> -->
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+
+
+<head>
+
+</head>
+<body>
+<h1>Hello,Namskara dear friends</h1>
+<button onclick="toggleNav()" style="float: right;">Open/Close Nav</button>
+<div class="Navbar Navbar--open">
+    <a href="#" class="Navbar__link">
+        <span class="material-icons">home</span>Home
+    </a>
+    <a href="#" class="Navbar__link">
+        <span class="material-icons">photos_library</span>Photos
+    </a>
+    <a href="#" class="Navbar__link">
+        <span class="material-icons">question_answer</span>Forum
+    </a>
+    <a href="#" class="Navbar__link">
+        <span class="material-icons">exit_to_icons</span>Logout
+    </a>
+</div>
+<script>
+    function toggleNav() {
+        document.querySelector(".Navbar").classlist.toggle("Navbar--open");
+
+    }
+
+</script>
+
+
+
+
+</body>
+</html>
+
+
+<style>
+    .Navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+      background: aquamarine;
+        border-right: 2px solid aquamarine;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 25);
+        opacity: 0;
+        transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out;
+        }
+        .Navbar--open {
+            left: 0;
+            opacity: 1;
+        }
+    
+        .Navbar__link {
+            display: block;
+            flex-direction: row;
+            align-items: center;
+            background: aquamarine;
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            border-bottom: 1px solid aquamarine;
+               }
+    
+               .Navbar__link .material-icons {
+                   margin-right: 12px; 
+               }
+    
+               .Navbar__link:active {
+                   background: aquamarine;
+               } 
+    </style>
